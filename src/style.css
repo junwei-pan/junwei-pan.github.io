@@ -1,0 +1,26 @@
+body {
+	font-size: 16px;
+	font-weight:400;
+	color: #000000;	
+	background-color: #FFFFFF;
+	font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+.container {
+	margin-left: 20px;
+}
+
+hr {
+	margin-top: 5px;
+}
+
+.top-buffer {
+	margin-top: 10px;
+}
+
+.bottom-buffer {
+	margin-bottom: 20px;
+}
+
+.number-font {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+}

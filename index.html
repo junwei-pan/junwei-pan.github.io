@@ -15,6 +15,9 @@
       gtag('js', new Date());
       gtag('config', 'G-VFWY81FCEL');
     </script>
+    <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 
 <body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="">
@@ -49,7 +52,7 @@
            <li>
                <p><strong>Disentangled Representation with Cross Experts Covariance Loss for Multi-Domain Recommendation</strong><br>
                    Zhutian Lin, <strong>Junwei Pan</strong>, Haibin Yu, Xi Xiao, Ximei Wang, Zhixiang Feng, Shifeng Wen, Shudong Huang, Lei Xiao, Jie Jiang [<a href="https://arxiv.org/abs/2405.12706">arxiv</a>]
-
+                \[\mathcal{L}_{Cov}= \frac{1}{d^2}\sum\limits_{p, q \in M\times M, p>q}||[\mathbf{O}^{(p)}-\overline{\mathbf{O}}^{(p)}]^T[\mathbf{O}^{(q)}-\overline{\mathbf{O}}^{(q)}]||_1\]
            </li>
 
 
@@ -83,7 +86,9 @@
                     Zhutian Lin*, <strong>Junwei Pan*</strong>, Shangyu Zhang, Ximei Wang, Xi Xiao, Shudong Huang, Lei Xiao, Jie Jiang <br>
 <!--                        [<a href="https://arXiv.org/abs/2403.14144">arXiv</a>] [<a href="https://github.com/SkylerLinn/Understanding-the-Ranking-Loss"]>code</a>] </p>-->
                     <em> ACM SIGKDD Conference on Knowledge Discovery & Data Mining (<a href="https://kdd2024.kdd.org"><strong>KDD</strong></a>) </em>, 2024 [<a href="https://arXiv.org/abs/2403.14144">arxiv</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/slides/Slides_KDD_2024_RankingLoss.pdf">slides</a>] [<a href="https://github.com/SkylerLinn/Understanding-the-Ranking-Loss">code</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/poster/Poster_KDD_2024_RankingLoss.pdf">poster</a>]
-
+                    <!--\[ \nabla_{z^{(-)}_j} \mathcal{L}_\text{BCE}= \frac{1}{1-\sigma(z^{(-)}_j)} \cdot \sigma(z^{(-)}_j)(1-\sigma(z^{(-)}_j)) = \sigma(z^{(-)}_j) = {\color{red}\hat{p}_{j}} \]-->
+                    \[\nabla_{z_j^{(-)}} \mathcal{L}_\text{Rank} = \frac{1}{N_+} \sum_{i=1}^{N_+} \sigma(z_j^{(-)}-z_i^{(+)}) > \frac{1}{N_+}\cdot N_+\cdot \sigma(z_j^{(-)})
+    = \sigma(z_j^{(-)}) = \nabla_{z_j^{(-)}} \mathcal{L}_\text{BCE}\]
                 </li>
 
                 <!--  24-2024              -->
@@ -92,7 +97,8 @@
                             Xingzhuo Guo, <strong>Junwei Pan</strong>, Ximei Wang, Baixu Chen, Jie Jiang, Mingsheng Long <br>
 
                        <em> International Conference on Machine Learning (<a href="https://icml.cc/Conferences/2024"><strong>ICML</strong></a>) </em>, 2024 [<a href="https://arXiv.org/abs/2310.04400">arXiv</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/slides/Slides_ICML_2024_MultiEmbedding.pdf">slides</a>] [<a href="https://github.com/thuml/Multi-Embedding">code</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/poster/Poster_ICML_2024_MultiEmbedding.pdf">poster</a>]
-                    </p>
+                   \[\textbf{e}_i =\textbf{E}_i^{\top}\textbf{1}_{x_i},\ \forall i\in\{1,2,...,N\}; h=I(\textbf{e}_1,\textbf{e}_2,...,\textbf{e}_n); \hat{y}=F(h)\]
+                   </p>
                 </li>
 
                 <!--  23-2024              -->
@@ -110,6 +116,7 @@
                        <p><strong>Temporal Interest Network for User Response Prediction</strong><br>
                            Haolin Zhou*, <strong>Junwei Pan*</strong>, Xinyi Zhou, Xihua Chen, Jie Jiang, Xiaofeng Gao, Guihai Chen <br>
                            <em>World Wide Web Conference (<a href="https://www2024.thewebconf.org"><strong>WWW</strong></a>)</em>, 2024  [<a href="https://arXiv.org/abs/2308.08487">arXiv</a>] (<strong>Oral</strong>) [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/slides/Slides_WWW_2024_TIN.pdf">slides</a>] [<a href="https://github.com/zhouxy1003/TIN"]>code</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/poster/Poster_WWW_2024_TIN.pdf">poster</a>]
+                       \[\textbf{u} =  \sum_{i \in \mathcal{H}}  \alpha(\tilde{\textbf{e}}_{i}, \tilde{\textbf{v}}_{t}) \cdot (\tilde{\textbf{e}}_{i} \odot \tilde{\textbf{v}}_t)\]
                        </p>
                 </li>
 
@@ -125,6 +132,8 @@
                        <p><strong>STEM: Unleashing the Power of Embeddings for Multi-task Recommendation</strong><br>
                                 Liangcai Su*, <strong><strong>Junwei Pan*</strong></strong>, Ximei Wang, Xi Xiao, Shijie Quan, Xihua Chen, Jie Jiang <br>
                            <em>AAAI Conference on Artificial Intelligence   (<a href="https://aaai.org/Conferences/AAAI-24"><strong>AAAI</strong></a>)</em>, 2024 [<a href="https://arXiv.org/abs/2308.13537">arXiv</a>] [<a href="https://github.com/LiangcaiSu/STEM">code</a>] [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/poster/Poster_AAAI_2024_STEM.pdf">poster</a>]
+                       \[\textbf{o}^{t}  =  \sum_{i}^{K_2} \textbf{g}^{S\rightarrow{t}}_{i} \textbf{h}^{S}_{i}(\textbf{E}^S) + \sum_{i}^{K_1} \textbf{g}^{t\rightarrow{t}}_{i} \textbf{h}^{t}_{i}(\textbf{E}^t)
+                 + \sum_{t' \in {\mathcal{T}}, t'\neq{t}}\sum_{i}^{K_1} \textbf{g}^{t'\rightarrow{t}}_{i}\texttt{SG}(\textbf{h}^{t'}_i(\textbf{E}^{t'}))\]
                        </p>
                 </li>
 
@@ -141,6 +150,7 @@
                     <p><strong>AdaTask: A Task-aware Adaptive Learning Rate Approach to Multi-task Learning</strong><br>
                         Enneng Yang*, <strong><strong>Junwei Pan*</strong></strong>, Ximei Wang, Haibin Yu, Li Shen, Xihua Chen, Lei Xiao, Jie Jiang, Guibing Guo<br>
                         <em>AAAI Conference on Artificial Intelligence (<a href="https://aaai.org/Conferences/AAAI-23"><strong>AAAI</strong></a>)</em>, 2023 [<a href="https://dl.acm.org/doi/10.1609/aaai.v37i9.26275">PDF</a>] (<strong>Oral</strong>)
+                    \[\theta_{t+1,i} = \theta_{t,i} - \sum_k  \frac{\eta}{\sqrt{ {G}_{t,i}^k} + \epsilon} {g}_{t,i}^k, G_{t,i}^k = G_{t-1,i}^k \!+\! {(g_{t,i}^k)}^2   \]
                     </p>
                 </li>
 
@@ -157,6 +167,7 @@
                     <p><strong>AutoAttention: Automatic Field Pair Selection for Attention in User Behavior Modeling</strong><br>
                     Zuowu Zheng, Xiaofeng Gao, <strong>Junwei Pan,</strong> Qi Luo, Guihai Chen, Dapeng Liu, Jie Jiang<br>
                     <em>IEEE International Conference on Data Mining  (<a href="https://icdm22.cse.usf.edu"><strong>ICDM</strong></a>)</em>, 2022  [<a href="https://arXiv.org/abs/2210.15154">arXiv</a>]
+                    \[a(\textbf{v}_i,  \textbf{e}_{F_{1:M}}) = \sigma\left(b + \sum_{p=1}^P \sum_{j=1}^M \langle \textbf{v}_{B_p}, \textbf{e}_{F_j} \rangle r_{B_p,F_j}\right)\]
                     </p>
                 </li>
 
@@ -211,8 +222,9 @@
                 <!--  9-2021              -->
                 <li>
                     <p><strong> FM^2: Field-matrixed Factorization Machines for CTR Prediction</strong><br>
-                    Aaron Flores Yang Sun, <strong>Junwei Pan,</strong> Alex Zhang <br>
+                    Yang Sun, <strong>Junwei Pan,</strong> Alex Zhang, Aaron Flores <br>
                     <em> World Wide Web Conference (<a href="https://www2021.thewebconf.org"><strong>WWW</strong></a>) </em>, 2021 [<a href="https://arXiv.org/abs/2102.12994">arXiv</a>]
+                        \[ \sum_i \sum_j x_i x_j \langle \textbf{v}_i M_{F(i), F(j)}, \textbf{v}_j \rangle \]
                     </p>
                 </li>
 
@@ -252,6 +264,7 @@
                     <p><strong>Predicting Different Types of Conversions with Multi-task Learning in Online Advertising</strong><br>
                     <strong>Junwei Pan,</strong> Yizhi Mao, Alfonso Lobos Ruiz, Yu Sun, Aaron Flores<br>
                     <em>ACM SIGKDD International Conference on Knowledge Discovery & Data mining (<a href="https://kdd2019.kdd.org"><strong>KDD</strong></a>)</em>, 2019 [<a href="https://dl.acm.org/doi/pdf/10.1145/3292500.3330783">PDF</a>]
+                     \[ \sum_i \sum_j x_i x_j \langle \textbf{v}_i, \textbf{v}_j \rangle r_{F(i), F(j)}^t \]
                     </p>
                 </li>
 
@@ -265,8 +278,9 @@
 
                 <!--  2-2018             -->
                 <li>
-                    <p><strong>Field-weighted Factorization Machines for Click-through Rate Prediction in Display Advertising</strong><br>
+                    <p><strong>Field-weighted Factorization Machines for Click-through Rate Prediction in Display Advertising </strong><br>
                     <strong>Junwei Pan,</strong> Jian Xu, Alfonso Lobos Ruiz, Wenliang Zhao, Shengjun Pan, Yu Sun, Quan Lu<br><em> World Wide Web Conference (<a href="https://www2018.thewebconf.org"><strong>WWW</strong></a>)</em>, 2018 [<a href="https://dl.acm.org/doi/pdf/10.1145/3124749.3124750">PDF</a>] (<strong>Oral</strong>) [<a href="https://github.com/junwei-pan/junwei-pan.github.io/blob/main/slides/Slides_WWW_2018_FwFM.pdf">slides</a>]
+                        \[ \sum_i \sum_j x_i x_j \langle \textbf{v}_i, \textbf{v}_j \rangle r_{F(i), F(j)} \]
                     </p>
                 </li>
 
